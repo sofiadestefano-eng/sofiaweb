@@ -6,7 +6,7 @@ export const brand = {
   role: "Coach y consultora de negocios",
   location: "Buenos Aires, Argentina",
   coverage: "Online y presencial en toda Argentina",
-  email: "hola@sofiadestefano.com", // TODO: reemplazar por el email real cuando esté el dominio
+  email: "sofia.destefano@hotmail.com", // TODO: reemplazar por el email real cuando esté el dominio
   instagram: "https://instagram.com/chuni.lab",
   instagramHandle: "@chuni.lab",
   linkedin: "https://www.linkedin.com/in/destefanosofia",
