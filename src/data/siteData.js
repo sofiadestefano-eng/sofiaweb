@@ -8,7 +8,7 @@ export const brand = {
   coverage: "Online y presencial en toda Argentina",
   email: "sofia.destefano@hotmail.com", // TODO: reemplazar por el email real cuando esté el dominio
   instagram: "https://instagram.com/sofiadestefano_coach",
-  instagramHandle: "@chuni.lab",
+  instagramHandle: "@sofiadestefano_coach",
   linkedin: "https://www.linkedin.com/in/destefanosofia",
 };
 
