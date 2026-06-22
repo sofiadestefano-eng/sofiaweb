@@ -47,7 +47,7 @@ export default function App() {
             {nav.map((n) => (
               <a key={n.href} href={n.href} onClick={closeMenu}>{n.label}</a>
             ))}
-            <a href="#contacto" className="nav-cta" onClick={closeMenu}>Agendar llamada</a>
+            <a href={brand.calendly} target="_blank" rel="noreferrer" className="nav-cta" onClick={closeMenu}>Agendar llamada</a>
           </div>
           <button
             className="nav-toggle"
@@ -72,7 +72,7 @@ export default function App() {
             </h1>
             <p className="lead">{hero.lead}</p>
             <div className="hero-actions">
-              <a href="#contacto" className="btn btn-primary">Agendar una llamada</a>
+              <a href={brand.calendly} target="_blank" rel="noreferrer" className="btn btn-primary">Agendar una llamada</a>
               <a href="#servicios" className="btn btn-ghost">Ver cómo trabajo</a>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function App() {
           <span className="eyebrow" style={{ justifyContent: "center" }}>{finalCta.eyebrow}</span>
           <h2>{finalCta.title}</h2>
           <p>{finalCta.text}</p>
-          <a href={`mailto:${brand.email}`} className="btn btn-primary">{finalCta.cta}</a>
+          <a href={brand.calendly} target="_blank" rel="noreferrer" className="btn btn-primary">{finalCta.cta}</a>
         </div>
       </section>
 
