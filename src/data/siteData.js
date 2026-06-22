@@ -6,10 +6,11 @@ export const brand = {
   role: "Coach y consultora de negocios",
   location: "Buenos Aires, Argentina",
   coverage: "Online y presencial en toda Argentina",
-  email: "sofia.destefano@hotmail.com", // TODO: reemplazar por el email real cuando esté el dominio
+  email: "sofia.destefano@hotmail.com",
   instagram: "https://instagram.com/sofiadestefano_coach",
   instagramHandle: "@sofiadestefano_coach",
   linkedin: "https://www.linkedin.com/in/destefanosofia",
+  calendly: "https://calendly.com/sofia-destefano-tudt/30min",
 };
 
 export const hero = {
