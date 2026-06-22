@@ -121,7 +121,7 @@ export default function App() {
               <div className="about-circle-inner">
                 <img
                   src={sofiaPhoto}
-                  alt="Sofía Destefano trabajando"
+                  alt="Sofia Destefano trabajando"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "60% 35%", borderRadius: "50%" }}
                 />
               </div>
@@ -133,6 +133,11 @@ export default function App() {
             <p style={{ marginTop: 18, color: "var(--ink-soft)", fontSize: 17, maxWidth: 520 }}>
               {about.intro}
             </p>
+            {about.story && about.story.map((par, i) => (
+              <p key={i} style={{ marginTop: 16, color: "var(--ink-soft)", fontSize: 16, maxWidth: 520, lineHeight: 1.7 }}>
+                {par}
+              </p>
+            ))}
             <div className="pillars">
               {about.pillars.map((p) => (
                 <div className="pillar" key={p.title}>
