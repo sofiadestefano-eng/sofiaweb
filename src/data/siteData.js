@@ -11,6 +11,8 @@ export const brand = {
   instagramHandle: "@sofiadestefano_coach",
   linkedin: "https://www.linkedin.com/in/destefanosofia",
   calendly: "https://calendly.com/sofia-destefano-tudt/30min",
+  youtube: "https://www.youtube.com/@chunitalks",
+  youtubeHandle: "@chunitalks",
 };
 
 export const hero = {
@@ -37,28 +39,28 @@ export const problem = {
 };
 
 export const about = {
-  eyebrow: "Quién soy",
-  title: 'Soy Sofia, tu socia estratégica "outsider".',
+  eyebrow: "Sobre mí",
+  title: "Detrás de cada estrategia, lo que más importa son las personas.",
   intro:
-    "Mi diferencial está en unir tres miradas: la del negocio, la estrategia y la persona. Tengo experiencia real liderando equipos y proyectos — sé qué funciona en la práctica, no solo en la teoría.",
+    "Soy Sofia Destefano. Uno mi experiencia en negocios con mi formación como coach para acompañar a personas y equipos a crecer sin perderse en el camino.",
   story: [
-    "Mi recorrido profesional comenzó en el mundo del desarrollo de negocios y las estrategias comerciales. A lo largo de los años acompañé empresas en su crecimiento y también me animé a emprender, fundando mi propia startup, Vestiando.com.",
-    "Esa experiencia me enseñó que, más allá de las estrategias, quienes realmente hacen la diferencia son las personas. Por eso decidí formarme como coach e integrar ambos mundos: la visión de negocio y el desarrollo humano.",
-    "Hoy acompaño a líderes, emprendedores y equipos a desarrollar su potencial, fortalecer su liderazgo y generar cambios que impulsen tanto el crecimiento de las personas como el de las organizaciones.",
+    "Mi camino empezó en el mundo del desarrollo de negocios y las estrategias comerciales. En el medio me animé a emprender: fundé Vestiando.com, una plataforma de moda circular que conectaba a quienes querían vender su ropa con quienes buscaban prendas de segunda mano en excelente estado.",
+    "Emprender me enseñó muchísimo, con aciertos y también con errores. Pero sobre todo me dejó una certeza: detrás de cualquier estrategia, de cualquier número o plan, lo que realmente hace la diferencia son las personas.",
+    "Por eso decidí formarme como coach, para integrar los dos mundos que más me apasionan: la visión de negocio y el desarrollo humano. Hoy mi propósito es acompañar a líderes, emprendedores y equipos a desarrollar su potencial, fortalecer su liderazgo y generar cambios que duren en el tiempo.",
   ],
   pillars: [
     {
-      icon: "E",
+      icon: "target",
       title: "Estratégica y práctica",
       text: "No te dejo solo con ideas — nos vamos con un plan claro y aplicable, con quick wins que se sienten desde el primer encuentro.",
     },
     {
-      icon: "C",
+      icon: "chat",
       title: "Cercana, no distante",
       text: "Hablamos el mismo idioma de negocio, sin que tengas que dar contexto cada vez. Las decisiones difíciles, las pensamos juntos.",
     },
     {
-      icon: "B",
+      icon: "balance",
       title: "Negocio y bienestar, juntos",
       text: "Crecer no debería costarte tu energía. Busco resultados sostenibles en el tiempo, sin sacrificar tu vida personal en el camino.",
     },
@@ -94,61 +96,105 @@ export const method = {
 
 export const services = {
   eyebrow: "Servicios",
-  title: "Tres formas de trabajar, según lo que necesites hoy.",
+  title: "Formas de trabajar juntos.",
   items: [
     {
       variant: "coaching",
-      badge: "Puerta de entrada",
-      name: "Sesión de Claridad",
-      meta: "1 sesión · Online o presencial · 60–90 min", // TODO: confirmar duración y precio
-      desc: "Para dueños de negocio o líderes que se sienten estancados y necesitan ordenar la cabeza. Salís con foco y los próximos 2-3 pasos concretos.",
+      badge: "El más elegido",
+      name: "Coaching para dueños de negocio",
+      meta: "Sesiones 1:1 · Online o presencial",
+      desc: "Para dueños de negocio que se sienten sobrecargados, perdieron claridad sobre el rumbo y necesitan ordenar prioridades sin sacrificar su bienestar.",
       ejes: [
-        "Diagnóstico rápido de tu momento actual",
-        "Foco: qué priorizar primero",
-        "Tus próximos 2-3 pasos concretos",
-        "Claridad para decidir con confianza",
+        "Recuperar claridad y foco sobre el rumbo",
+        "Ordenar prioridades y delegar mejor",
+        "Fortalecer tu liderazgo",
+        "Equilibrar crecimiento del negocio y vida personal",
       ],
-      cta: "Quiero una Sesión de Claridad",
+      cta: "Quiero saber más",
     },
     {
       variant: "consultoria",
-      badge: "Programa estrella",
-      name: "Acompañamiento 1:1",
-      meta: "Sesiones quincenales · Online o presencial · 3 meses", // TODO: confirmar duración y precio
-      desc: "Mentoría continua para dueños de negocio que quieren un plan claro y alguien con quien pensar las decisiones importantes. Combina coaching (vos y tu rol) con mirada de negocio.",
+      badge: "Para empezar",
+      name: "Coaching para emprender",
+      meta: "Sesiones 1:1 · Online o presencial",
+      desc: "Para quienes quieren lanzar un proyecto independiente: tienen muchas ideas pero no saben por dónde empezar y necesitan claridad para avanzar.",
       ejes: [
-        "Claridad mental y gestión de la energía",
-        "Plan claro y priorización de lo importante",
-        "Decisiones difíciles, acompañadas",
-        "Mirada de negocio y estrategia aplicada",
+        "Pasar de las ideas a un plan concreto",
+        "Claridad y planificación para arrancar",
+        "Acompañamiento para tomar decisiones",
+        "Dar los primeros pasos con confianza",
       ],
-      cta: "Quiero el Acompañamiento 1:1",
+      cta: "Quiero saber más",
     },
     {
-      variant: "coaching",
-      badge: "Para tu carrera",
-      name: "Coaching de Carrera",
-      meta: "Sesiones 1:1 · Online o presencial · A definir", // TODO: confirmar formato, duración y precio
-      desc: "Para personas que quieren redefinir su carrera: repensar su rumbo, hacer una transición o reconectar con lo que quieren profesionalmente. Un proceso para ganar claridad y diseñar el próximo paso.",
+      variant: "consultoria",
+      badge: "Para equipos",
+      name: "Coaching y desarrollo de equipos",
+      meta: "Para empresas y equipos · Online o presencial",
+      desc: "Para organizaciones que quieren equipos más alineados, mejor comunicación y líderes que crezcan. Acompaño procesos y dinámicas de trabajo.",
       ejes: [
-        "Claridad sobre tu rumbo profesional",
-        "Transiciones y cambios de carrera",
-        "Reconectar con lo que querés",
-        "Diseñar y dar tu próximo paso",
+        "Alineación de equipos y roles claros",
+        "Reuniones efectivas y seguimiento de proyectos",
+        "Comunicación entre áreas",
+        "Desarrollo de líderes y procesos de cambio",
       ],
-      cta: "Quiero Coaching de Carrera",
+      cta: "Hablemos de tu equipo",
+    },
+    {
+      variant: "mentoria",
+      badge: "Negocio",
+      name: "Consultoría / Mentoring de negocios",
+      meta: "A medida · Online o presencial",
+      desc: "Cuando además del acompañamiento necesitás dirección concreta sobre el negocio. Acá aporto mi experiencia para definir estrategia y organizar la operación.",
+      ejes: [
+        "Estrategia comercial y prioridades",
+        "Organización del negocio y procesos",
+        "Planificación y hoja de ruta",
+        "Acompañamiento para implementar mejoras",
+      ],
+      cta: "Quiero saber más",
     },
   ],
 };
 
-export const testimonial = {
-  quote:
-    "Pude tomar decisiones que venía postergando — poner fin a relaciones que no daban rédito y enfocarme en lo que realmente puedo sostener. Lo más valioso fue tener alguien con quien hablar el mismo idioma de negocio, sin tener que dar contexto cada vez.",
-  stats: [
-    { big: "8/10", label: "en orden y progreso de su negocio" },
-    { big: "100%", label: "eligió continuar el proceso" },
+export const topics = {
+  eyebrow: "En qué trabajamos",
+  title: "Temas que suelen aparecer en el proceso.",
+  intro:
+    "Cada proceso es único, pero estos son algunos de los temas que más trabajo con quienes acompaño. La idea siempre es la misma: cambios sostenibles en el tiempo, no soluciones de corto plazo.",
+  items: [
+    "Alineación entre vida personal y profesional",
+    "Organización y productividad",
+    "Definición de objetivos",
+    "Planificación semestral",
+    "Construcción de hábitos",
+    "Delegación efectiva",
+    "Priorización",
+    "Liderazgo",
+    "Comunicación",
+    "Gestión de equipos",
+    "Conversaciones difíciles",
+    "Desarrollo sostenible del negocio",
   ],
-  attribution: "— Anónimo, profesional independiente",
+};
+
+export const testimonials = {
+  eyebrow: "Testimonios",
+  title: "Lo que dicen quienes ya trabajaron conmigo.",
+  items: [
+    {
+      quote:
+        "Sofia logró transformar muchas ideas sueltas en un plan de acción claro. Tener todo centralizado nos permitió ordenar prioridades y hacer seguimiento. La encuesta a nuestra comunidad nos dio información muy valiosa para decidir con más fundamento, y los encuentros cada 15 días fueron ideales: avanzábamos, implementábamos entre reuniones y llegábamos con nuevos aprendizajes, sin presión. Destaco el enfoque práctico de cada encuentro: desde optimizar nuestras keywords para Google hasta decisiones estratégicas, siempre veíamos resultados durante el proceso.",
+      author: "Daniela Rodríguez",
+      role: "Fundadora de Maitri — Yoga Shala, Palermo (Buenos Aires, 2025)",
+    },
+    {
+      quote:
+        "Pude tomar decisiones que venía postergando — poner fin a relaciones que no daban rédito y enfocarme en lo que realmente puedo sostener. Lo más valioso fue tener alguien con quien hablar el mismo idioma de negocio, sin tener que dar contexto cada vez.",
+      author: "Confidencial",
+      role: "Profesional independiente",
+    },
+  ],
 };
 
 export const experience = {
@@ -204,6 +250,7 @@ export const finalCta = {
 export const nav = [
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#metodo", label: "Cómo trabajo" },
+  { href: "#temas", label: "Temas" },
   { href: "#servicios", label: "Servicios" },
   { href: "#faq", label: "Preguntas" },
 ];

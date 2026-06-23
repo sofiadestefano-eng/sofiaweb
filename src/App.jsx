@@ -2,8 +2,33 @@ import { useState, useEffect } from "react";
 import sofiaPhoto from "./assets/sofia.jpg";
 import {
   brand, hero, trust, problem, about, method,
-  services, testimonial, experience, faqs, finalCta, nav,
+  services, topics, testimonials, experience, faqs, finalCta, nav,
 } from "./data/siteData";
+
+const pillarIcons = {
+  target: (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  chat: (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M8 13.5H4.5A1.5 1.5 0 0 1 3 12V5.5A1.5 1.5 0 0 1 4.5 4h10A1.5 1.5 0 0 1 16 5.5V7" />
+      <path d="M9.5 10h10A1.5 1.5 0 0 1 21 11.5V18a1.5 1.5 0 0 1-1.5 1.5h-3V22l-3.5-2.5h-3.5A1.5 1.5 0 0 1 8 18v-6.5A1.5 1.5 0 0 1 9.5 10Z" />
+    </svg>
+  ),
+  balance: (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3v18" />
+      <path d="M6 7h12" />
+      <path d="M6 7l-3 6a3 3 0 0 0 6 0Z" />
+      <path d="M18 7l-3 6a3 3 0 0 0 6 0Z" />
+      <path d="M8 21h8" />
+    </svg>
+  ),
+};
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -80,7 +105,6 @@ export default function App() {
             <div className="portrait-ring">
               <img src={sofiaPhoto} alt={`${brand.name}, ${brand.role}`} />
             </div>
-            <div className="portrait-badge"><span className="dot" />{hero.badge}</div>
           </div>
         </div>
       </header>
@@ -130,7 +154,7 @@ export default function App() {
           <div className="reveal">
             <span className="eyebrow">{about.eyebrow}</span>
             <h2>{about.title}</h2>
-            <p style={{ marginTop: 18, color: "var(--ink-soft)", fontSize: 17, maxWidth: 520 }}>
+            <p style={{ marginTop: 18, color: "var(--green)", fontSize: 19, fontWeight: 500, lineHeight: 1.55, maxWidth: 520 }}>
               {about.intro}
             </p>
             {about.story && about.story.map((par, i) => (
@@ -138,17 +162,17 @@ export default function App() {
                 {par}
               </p>
             ))}
-            <div className="pillars">
-              {about.pillars.map((p) => (
-                <div className="pillar" key={p.title}>
-                  <div className="pillar-icon">{p.icon}</div>
-                  <div>
-                    <h3>{p.title}</h3>
-                    <p>{p.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+        <div className="wrap">
+          <div className="pillars reveal">
+            {about.pillars.map((p) => (
+              <div className="pillar" key={p.title}>
+                <div className="pillar-icon">{pillarIcons[p.icon]}</div>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -174,6 +198,22 @@ export default function App() {
         </div>
       </section>
 
+      {/* TEMAS */}
+      <section className="topics" id="temas">
+        <div className="wrap">
+          <div className="section-head reveal">
+            <span className="eyebrow">{topics.eyebrow}</span>
+            <h2>{topics.title}</h2>
+            <p style={{ marginTop: 18, color: "var(--ink-soft)", maxWidth: 620 }}>{topics.intro}</p>
+          </div>
+          <div className="topics-grid reveal">
+            {topics.items.map((t) => (
+              <span className="topic-chip" key={t}>{t}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="servicios">
         <div className="wrap">
@@ -193,7 +233,7 @@ export default function App() {
                     <li key={e}><span className="check" />{e}</li>
                   ))}
                 </ul>
-                <a href="#contacto" className={"btn " + (i === 1 ? "btn-primary" : "btn-ghost")}>
+                <a href="#contacto" className={"btn " + (i === 0 ? "btn-primary" : "btn-ghost")}>
                   {s.cta}
                 </a>
               </div>
@@ -202,20 +242,23 @@ export default function App() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="testimonial">
+      {/* TESTIMONIALS */}
+      <section className="testimonial" id="testimonios">
         <div className="wrap">
-          <div className="testimonial-box reveal">
-            <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
-            <div className="testimonial-stats">
-              {testimonial.stats.map((st) => (
-                <div className="stat" key={st.label}>
-                  <div className="big">{st.big}</div>
-                  <div className="label">{st.label}</div>
-                </div>
-              ))}
-            </div>
-            <p className="testimonial-attr">{testimonial.attribution}</p>
+          <div className="section-head center reveal" style={{ marginLeft: "auto", marginRight: "auto" }}>
+            <span className="eyebrow">{testimonials.eyebrow}</span>
+            <h2>{testimonials.title}</h2>
+          </div>
+          <div className="testimonials-grid">
+            {testimonials.items.map((t, i) => (
+              <figure className="testimonial-card reveal" key={i}>
+                <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+                <figcaption>
+                  <span className="t-author">{t.author}</span>
+                  <span className="t-role">{t.role}</span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
@@ -291,6 +334,7 @@ export default function App() {
                 <h4>Contacto</h4>
                 <a href={`mailto:${brand.email}`}>{brand.email}</a>
                 <a href={brand.instagram} target="_blank" rel="noreferrer">Instagram {brand.instagramHandle}</a>
+                <a href={brand.youtube} target="_blank" rel="noreferrer">YouTube {brand.youtubeHandle}</a>
                 <a href={brand.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
             </div>
